@@ -1,0 +1,20 @@
+
+<ion-content [fullscreen]="true">
+  <ion-toolbar>
+    <ion-button class="left" (click)="signOut()">Sign out</ion-button>
+  </ion-toolbar>
+  <ion-title>Your ideas, saved </ion-title>
+    <ion-title>organized effortlessly. </ion-title>
+  <div class="container">
+    <b></b>
+    <ion-img src="assets/bg.png"/>
+    <a class="right" [routerLink]="['/journals']">Notes</a>
+
+  </div>
+  
+  <ion-fab  vertical="bottom" horizontal="end" style="margin-bottom: 30px;" >
+    <!-- <ion-fab-button [routerLink]="['/login']"  >
+      <ion-icon name="chevron-forward"></ion-icon>
+    </ion-fab-button> -->
+  </ion-fab>
+</ion-content>
