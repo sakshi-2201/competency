@@ -29,7 +29,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 
     IonicModule.forRoot(),
     AppRoutingModule,
-    ServiceWorkerModule.register('combined-sw.js', {
+    ServiceWorkerModule.register('src/combined-sw.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
