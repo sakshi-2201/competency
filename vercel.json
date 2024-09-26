@@ -1,0 +1,12 @@
+{
+    "routes": [
+      {
+        "src": "/combined-sw.js",
+        "headers": {
+          "Cache-Control": "public,max-age=0,must-revalidate",
+          "Content-Type": "application/javascript"
+        }
+      }
+    ]
+  }
+  
