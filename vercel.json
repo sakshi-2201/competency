@@ -1,12 +1,14 @@
 {
-    "routes": [
-      {
-        "src": "/combined-sw.js",
-        "headers": {
-          "Cache-Control": "public,max-age=0,must-revalidate",
-          "Content-Type": "application/javascript"
-        }
-      }
-    ]
-  }
-  
+  "headers": [
+    {
+      "source": "/src/combined-sw.js",
+      "headers": [{ "key": "Content-Type", "value": "application/javascript" }]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/combined-sw.js",
+      "destination": "/src/combined-sw.js"
+    }
+  ]
+}
