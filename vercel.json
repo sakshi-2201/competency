@@ -1,14 +1,14 @@
 {
   "headers": [
     {
-      "source": "/src/combined-sw.js",
+      "source": "/src/firebase-messaging-sw.js",
       "headers": [{ "key": "Content-Type", "value": "application/javascript" }]
     }
   ],
   "rewrites": [
     {
-      "source": "/combined-sw.js",
-      "destination": "/src/combined-sw.js"
+      "source": "/firebase-messaging-sw.js",
+      "destination": "/src/firebase-messaging-sw.js"
     }
   ]
 }
