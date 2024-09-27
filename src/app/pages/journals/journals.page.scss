@@ -13,7 +13,7 @@ ion-item {
 .title{
     font-weight: bold;
     color: black;
-    font-size: 10px;
+    font-size: 15px;
     display: -webkit-box;   
     overflow: hidden; 
     height: 30px;
@@ -39,16 +39,16 @@ ion-card {
     
   }
   ion-textarea {
-    min-height: 40px;
+    min-height: 30px;
     textarea {
-        min-height:40px;
+        min-height:30px;
     }
 }
 
 .text-content{
     // font-size: 4em;
     // min-height: 140px;
-    min-height:240px;
+    min-height:140px;
     
 
 }

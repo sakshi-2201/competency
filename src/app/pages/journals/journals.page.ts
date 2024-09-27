@@ -96,6 +96,9 @@ export class JournalsPage implements OnInit {
     await modal.present()
   }
 
+  // logout() {
+  //   this.router.navigate(['login']);
+  // }
   
 
 }

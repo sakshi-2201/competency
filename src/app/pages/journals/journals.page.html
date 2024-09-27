@@ -3,7 +3,12 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Notes</ion-title>
+    <ion-title class="ion-text-center">Notes</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/login']">
+        <ion-icon name="log-out-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -15,7 +20,7 @@
 
           <ion-card-header>
             <ion-card-title class="title">{{journal.title}}</ion-card-title>
-            <ion-card-subtitle  color="secondary" >06:11</ion-card-subtitle>
+            <ion-card-subtitle  color="secondary" >{{ journal.reminder | date: 'MMM dd, yyyy' }}</ion-card-subtitle>
           </ion-card-header>
 
           <ion-card-content class="content">
@@ -33,9 +38,9 @@
           <ion-buttons slot="start">
             <ion-button (click)="cancel()">Cancel</ion-button>
           </ion-buttons>
-          <ion-title>Add Journal</ion-title>
+          <ion-title class="ion-text-center">Add Journal</ion-title>
           <ion-buttons slot="end">
-            <ion-button (click)="confirm()" [strong]="true">Save</ion-button>
+            <ion-button (click)="confirm()"><ion-icon color="secondary" size="large" slot="icon-only" name="save"></ion-icon></ion-button>
           </ion-buttons>
         </ion-toolbar>
       </ion-header>
@@ -45,13 +50,13 @@
           <ion-input label="Title" labelPlacement="stacked" type="text" placeholder="" [(ngModel)]="title"></ion-input>
         </ion-item>
 
-        <ion-textarea class="text-content" rows=“15”  lines="none" placeholder="Type something here"
+        <ion-textarea class="text-content" rows=“15”  lines="none" label="Description"
         [(ngModel)]="note">
         </ion-textarea>
 
         <ion-item>
-          <ion-label position="stacked">Set Reminder</ion-label>
-          <ion-datetime [(ngModel)]="reminder" name="reminder" displayFormat="MMM DD, YYYY HH:mm" presentation="date-time" [preferWheel]="true"></ion-datetime>
+          <ion-label position="stacked">Due Date</ion-label>
+          <ion-datetime [(ngModel)]="reminder" name="reminder" displayFormat="MMM DD, YYYY" presentation="date" [preferWheel]="true"></ion-datetime>
         </ion-item>
       
       </ion-content>

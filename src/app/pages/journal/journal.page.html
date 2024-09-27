@@ -23,14 +23,14 @@
 
   <div *ngIf="journal">
     <ion-item>
-      <ion-input label="Title"   class="title" [(ngModel)]="journal.title"></ion-input>
+      <ion-input label="Title" class="title" [(ngModel)]="journal.title"></ion-input>
     </ion-item>
       <ion-textarea class="text-content" lines="none" [(ngModel)]="journal.content" ></ion-textarea>
 
-      <ion-item>
+      <!-- <ion-item>
         <ion-label position="stacked">Set Reminder</ion-label>
         <ion-datetime [(ngModel)]="journal.reminder" name="reminder" displayFormat="MMM DD, YYYY HH:mm"></ion-datetime>
-      </ion-item>
+      </ion-item> -->
   </div>
 
 </ion-content>
